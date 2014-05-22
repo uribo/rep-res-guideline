@@ -4,3 +4,5 @@ ABSTRCT
 いかなる分野の学術研究においても、その再現性や信憑性は重要です。そのため研究者のreproducible researchに対する関心が近年高まっています。
 
 発表者はGitHubがソーシャルコーディングの概念にもとづく開放的な環境を提供するということから、研究者が求める研究の誠実さを証明するツールとして効果的であると考えています。そこで今回は、GitHubの特徴・機能を活用したreproducibleな研究計画、データ解析から学術論文の作成までの手順の提案と課題について話します。
+
+Talk: introduced to using the GitHub on reproducible research
