@@ -1,0 +1,83 @@
+\documentclass[dvipdfmx, 14pt]{beamer}
+\usepackage{pxjahyper}
+\usepackage{otf} %!!!
+\usepackage{mediabb}
+\usepackage{tikz}
+\usetheme{default}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\renewcommand{\familydefault}{\sfdefault} % 欧文書体をHelveticaに
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{background canvas}{\includegraphics[height=\paperheight]{bg}}
+
+
+\setbeamerfont{title}{size=\huge, series=\bf}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{normal text}{fg=black, bg=custom.bgc}
+\setbeamercolor{frametitle}{fg=black}
+
+\definecolor{custom.fc}{HTML}{F4F6F7}
+\definecolor{custom.bgc}{HTML}{4798DD}
+
+\graphicspath{{../../src/}}
+
+%#######*****####### titile #######*****#######***
+\title{GitHubで行う\\reproducible research}
+\author[瓜生]{\href{http://urush.postach.io}{瓜生真也}}
+\institute[横国大院・環情]{横浜国立大学大学院 環境情報学府}
+\subject{LT slide for GitHubKaigi@Shibuya}
+\date{\scriptsize GitHub Kaigi(@Shibuya), June 1, 2014
+
+\vspace{1em}
+\href{http://github.com/uribo/rep-res-guideline}{github.com/uribo}
+
+%\vspace{0.5em}
+%\href{http://github.com/uribo/rep-res-guideline}{Repository is here.}
+}
+\logo{\includegraphics[height=0.8cm]{RR-icon}\hspace{15pt}\vspace{230pt}}
+
+%#######*****#######*****#######*****#######***
+\begin{document}
+\frame{\titlepage}
+\section[Outline]{}
+\frame{\tableofcontents}
+\section{Introduction}
+  \subsection{reproducible research}
+\section{Reproducible research with GitHub}
+\section{Instruction}
+\section{Future works}
+\section{References}
+%#######*****#######*****#######*****#######***
+\frame
+{
+  \frametitle{Features of the Beamer Class}
+  \begin{itemize}
+  \item<1-> Normal LaTeX class. あいうえお
+  \item<2-> Easy overlays.
+  \item<3-> No external programs needed.      
+  \end{itemize}
+  
+}
+
+
+
+\frame
+{
+  \frametitle{Features of the Beamer Class}
+  
+  \begin{block}{block}
+枠囲いの環境
+\end{block}
+\includegraphics[height=3cm,keepaspectratio] {research-flow}
+}
+
+\section*{references}
+ \begin{frame}[allowframebreaks]{References}
+  \scriptsize
+  \bibliographystyle{jplain}
+  \bibliography{ebibtex}
+ \end{frame}
+
+
+
+\end{document}
