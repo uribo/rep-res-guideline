@@ -1,8 +1,17 @@
 Manuscript
 ======
 
-GitHubで行うreproducibel research
+## GitHubで行うreproducible research
 
-## 
+* * *
+
+### 研究の流れ
+
+先行研究のレビュー -> 研究計画 <-> サンプリング -> データ解析 -> 論文執筆
+
+↑この過程の中でGithubを活用する（ただのGit, 他のサービスじゃだめなの？）。
+
+
+##
 
 ぷろぐらまーではありません
