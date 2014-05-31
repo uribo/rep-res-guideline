@@ -9,20 +9,14 @@
 \renewcommand{\kanjifamilydefault}{\gtdefault}
 \renewcommand{\familydefault}{\sfdefault} % 欧文書体をHelveticaに
 \setbeamertemplate{navigation symbols}{}
-
 \setbeamertemplate{background canvas}{\includegraphics[height=\paperheight]{bg}}
-
-
 \setbeamerfont{title}{size=\huge, series=\bf}
 \setbeamercolor{title}{fg=black}
-\setbeamercolor{normal text}{fg=black, bg=custom.bgc}
 \setbeamercolor{frametitle}{fg=black}
-
+\setbeamerfont{alerted text}{series=\bf}
+\setbeamercolor{alerted text}{fg=custom.fc}
 \definecolor{custom.fc}{HTML}{F4F6F7}
-\definecolor{custom.bgc}{HTML}{4798DD}
-
 \graphicspath{{../../src/}}
-
 %#######*****####### titile #######*****#######***
 \title{GitHubで行う\\reproducible research}
 \author[瓜生]{\href{http://urush.postach.io}{瓜生真也}}
@@ -36,11 +30,6 @@
 \begin{document}
 
 \frame{\titlepage}
-
-\frame{
-  \begin{center}
-  \Huge 「論文」と聞いて\\どういう印象を\\持ちますか？
-  \end{center}}
 
 {\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gg-suggest}}%
 \frame{}}%なぜ論文に再現性が必要なのか
@@ -60,10 +49,33 @@
   \begin{itemize}
   \setlength{\itemindent}{2em}
   {\Large
-    \item[\ding{51}] 客観性
-    \item[\ding{51}] 明瞭性
-    \item[\ding{51}] 妥当性
+    \item[\ding{51}] \alert{客観性}
+    \item[\ding{51}] \alert{明瞭性}
+    \item[\ding{51}] \alert{妥当性}
   }\end{itemize}}
+  
+\frame{
+  \frametitle{開発者と科学者で共通するもの}
+  \begin{center}
+  \vspace{-1.0em}
+  {\tiny Prli{\'c}, A., and J. B. Procter. 2012. PLOS Computational Biology 8}
+  \includegraphics[width=8.0cm]{Prlic-and-Procter2012Plos}\\
+  \end{center}
+  \vspace{-1.0em}
+  \begin{enumerate}
+    {\small
+    \item \alert{Don't Reinvent the Wheel}
+    \item Code Well
+    \item \alert{Be Your Own User}
+    \item \alert{Be Transparent}
+    \item \alert{Be Simple}
+    \item Don't Be a Perfectionist
+    \item Nurture and Grow Your Community
+    \item Promote Your Project
+    \item Find Sponsors
+    \item Science Counts
+  }\end{enumerate}
+  }
 %#######*****#######*****#######*****#######***
 \frame{
   \frametitle{研究の流れ}
@@ -92,63 +104,41 @@
   \end{itemize}  
 }
 
-%\frame{
-%  \frametitle{RRを行う際のガイドライン}
-%  \vspace{-1.0em}
-%  \begin{center}
-%  \includegraphics[height=4cm]{course-and-guidelines}\\
-%  {\Huge なければ作れば\\いいじゃない}\\
-%  言い出しっぺの法則
-%  \end{center}
-%}
-
 \frame{
   \frametitle{データ解析: \includegraphics[height=0.7cm]{r-logo}}
   \vspace{0.5em}
-  リポジトリ内のソースコード、データファイルを実行すれば同様の結果が得られる
-  \begin{wrapfigure}{o}[40pt]{60mm}
-    \includegraphics[height=4.5cm]{r-code-markdown}
-  \end{wrapfigure}
-  \vspace{0.5em}
-  \begin{itemize} 
-    \item `Rstudio.app`で`.Rmd`, `.md`, `.html`ファイルを作成すれば、コードと作図の確認が可能
-    \item 修正点はコミットコメントで
-  \end{itemize}}
-
+  \begin{center}
+  リポジトリ内のソースコード、データファイルを用いれば同様の結果が得ることができる\\
+  \vspace{0.6em}
+  \includegraphics[height=6.0cm]{r-code-markdown}
+    \end{center}}
+    
 \frame{
   \frametitle{論文執筆: \includegraphics[height=0.7cm]{latex-logo}}
-  テキストファイルなので差分の確認が容易。必要があればバックアップから復元
-  \begin{wrapfigure}{o}[40pt]{60mm}
-    \includegraphics[height=4.5cm]{latex-revise}
-  \end{wrapfigure}
-  \vspace{0.5em}
-  \begin{itemize}
-    \item 改訂を受けたらブランチを切り替え
-    \item 「窓」からの脱出
-  \end{itemize}  
-}
-
+  \begin{center}
+  テキストファイルなので差分の確認が容易。\\必要があればバックアップから復元\\
+  \vspace{0.6em}
+    \includegraphics[height=6.0cm]{latex-revise}
+  \end{center}}
 
 \frame{
   \frametitle{Pull Request, Issuesを使った査読}
   \begin{center}
-  \includegraphics[height=3cm]{instruction}\\
-  \vspace{1.0em}
-  \includegraphics[height=3.0cm]{research-flow-branch}
-  \end{center}
-}
-
-
-
+  \includegraphics[height=5.0cm]{instruction}
+  \end{center}}
+%#######*****#######*****#######*****#######***
 \frame{
   \frametitle{今後の展望と課題}
-  \begin{center}
-  \includegraphics[height=5cm]{issues}
-  \end{center}
-
-}
-
-
-
-
+  \only<1>{
+    \begin{itemize}
+      \item Computational Scienceだけでなく、いかなる分野の研究にもreproducible researchの概念が必要
+      \item Data analysisとWriting にGitHubが活用できる
+      \item ソーシャルコーディングの概念は研究の再現性だけでなく、客観性や明瞭性を向上させる
+    \end{itemize}}
+  \only<2>{
+    \begin{itemize}
+      \item GitHubに生データを上げるのはどうなの？ 安全？
+      \item 査読は匿名、というのが原則... やめちまえ
+      \item ソーシャルコーディングとの矛盾...
+    \end{itemize}}}
 \end{document}
