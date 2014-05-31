@@ -1,7 +1,7 @@
 Guideline to reproducible research
 ============
 
-<img src="src/RR-icon.svg">
+<img src="src/RR-icon.png" width="150">
 
 Talk from [GitHubKaigi](http://githubkaigi.org), June 1st 2014 about my idea that reproducible research used to GitHub.
 
