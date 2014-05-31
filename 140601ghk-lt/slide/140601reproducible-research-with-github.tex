@@ -28,21 +28,18 @@
 \author[瓜生]{\href{http://urush.postach.io}{瓜生真也}}
 \institute[横国大院・環情]{横浜国立大学大学院 環境情報学府}
 \subject{LT slide for GitHubKaigi@Shibuya}
-\date{\scriptsize GitHub Kaigi(@Shibuya), June 1, 2014
-
+\date{\scriptsize GitHub Kaigi(@Shibuya), June 1, 2014\\
 \vspace{1em}
 \href{http://github.com/uribo/rep-res-guideline}{github.com/uribo}
-
-%\vspace{0.5em}
-%\href{http://github.com/uribo/rep-res-guideline}{Repository is here.}
 }
-%\logo{\includegraphics[height=0.8cm]{RR-icon}\hspace{15pt}\vspace{230pt}}
-
 %#######*****#######*****#######*****#######***
 \begin{document}
+
+\frame{\titlepage}
+
 \frame{
   \begin{center}
-  \Huge 論文
+  \Huge 「論文」と聞いて\\どういう印象を\\持ちますか？
   \end{center}}
 
 {\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gg-suggest}}%
@@ -66,20 +63,14 @@
     \item[\ding{51}] 客観性
     \item[\ding{51}] 明瞭性
     \item[\ding{51}] 妥当性
-  }\end{itemize}
-  \vspace{0.5em}
-  %{\small ...GitHubを活用したRRの実践方法を提案}
-  }
-
-\frame{\titlepage}
+  }\end{itemize}}
 %#######*****#######*****#######*****#######***
 \frame{
   \frametitle{研究の流れ}
   統計解析と論文の執筆は鬼門
   \begin{center}
   \includegraphics[width=11cm]{research-flow}
-  \end{center}
-}
+  \end{center}}
 
 {\usebackgroundtemplate{\includegraphics[width=\paperwidth]{misc-files}}%
 \frame{}} %解析フォルダは魑魅魍魎の世界
@@ -88,17 +79,17 @@
 \frame{}} %過去のファイル
 
 \frame{
-  \frametitle{Git/GitHubの特徴を活かした\\研究のススメ方}
-  \vspace{-2.6em}
+  \frametitle{GitHubの特徴を活かしたRRな研究}
+  ソーシャルコーディングの概念を研究に...
   \begin{center}
-  \includegraphics[height=3cm]{research-flow-branch}
+  \includegraphics[height=3.0cm]{research-flow-branch}
   \end{center}
-  \vspace{-1em}
   \begin{itemize}
-    \item バージョン管理システム{\small （リポジトリ、ブランチ）}
-    \item issues
-    \item commit
-  \end{itemize}
+    \item テキストファイルをもとにした進行
+    \item 進捗状況に応じたブランチの切り替え
+    \item 用途を記述したコミットコメント
+    \item バックアップ、差分確認は気にしない
+  \end{itemize}  
 }
 
 %\frame{
@@ -112,25 +103,38 @@
 %}
 
 \frame{
-  \frametitle{みんな大好きR}
-  \begin{center}
-  \includegraphics[height=3cm]{instruction}\\
-  \end{center}
+  \frametitle{データ解析: \includegraphics[height=0.7cm]{r-logo}}
+  \vspace{0.5em}
+  リポジトリ内のソースコード、データファイルを実行すれば同様の結果が得られる
+  \begin{wrapfigure}{o}[40pt]{60mm}
+    \includegraphics[height=4.5cm]{r-code-markdown}
+  \end{wrapfigure}
+  \vspace{0.5em}
+  \begin{itemize} 
+    \item `Rstudio.app`で`.Rmd`, `.md`, `.html`ファイルを作成すれば、コードと作図の確認が可能
+    \item 修正点はコミットコメントで
+  \end{itemize}}
+
+\frame{
+  \frametitle{論文執筆: \includegraphics[height=0.7cm]{latex-logo}}
+  テキストファイルなので差分の確認が容易。必要があればバックアップから復元
+  \begin{wrapfigure}{o}[40pt]{60mm}
+    \includegraphics[height=4.5cm]{latex-revise}
+  \end{wrapfigure}
+  \vspace{0.5em}
+  \begin{itemize}
+    \item 改訂を受けたらブランチを切り替え
+    \item 「窓」からの脱出
+  \end{itemize}  
 }
 
 
 \frame{
-  \frametitle{みんな大好きLaTeX}
-  \begin{center}
-  \includegraphics[height=3cm]{latex-logo}\\
-  \end{center}
-}
-
-
-\frame{
-  \frametitle{著者、出版社、査読者への指示書き}
+  \frametitle{Pull Request, Issuesを使った査読}
   \begin{center}
   \includegraphics[height=3cm]{instruction}\\
+  \vspace{1.0em}
+  \includegraphics[height=3.0cm]{research-flow-branch}
   \end{center}
 }
 
@@ -138,6 +142,9 @@
 
 \frame{
   \frametitle{今後の展望と課題}
+  \begin{center}
+  \includegraphics[height=5cm]{issues}
+  \end{center}
 
 }
 
