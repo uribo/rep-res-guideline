@@ -11,19 +11,20 @@ GitHubで行うreproducible research
 
 1. はじめに Introduction
     1. reproducible researchとは
-    2. なぜ今reproducible researchなのか
-    3. （いくつか）10のルール
+    2. なぜ今reproducible research(RR)なのか
+    3. 開発者と科学者で共通するいくつかのルール
 2. Githubで行うreproducible research
     1. 一般的な研究の流れ
     2. Git/GitHubの特徴を活かして
-    3. 開発者と科学者に共通するもの
+    3. 俺俺RR的GitHubの使い方
 3. 指示書き Instruction
     1. 著者・共著者へ author
     2. 出版社へ publisher
     3. 査読者へ editor/reviewer
-4. 今後の展望と課題 Future works
-    1. 期待
-    2. せきゅあー？
-    3. 匿名性とソーシャルコーディング（矛盾）
-    4. GitHub実践入門を読んで勉強中...
-5. References
+4. まとめ Conclusion
+
+## Slide
+
+Speaker Deckにて公開しています。
+
+https://speakerdeck.com/s_uryu/githubdexing-ureproducible-research-github-kaigi-tokyo-2014
